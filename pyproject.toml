@@ -1,0 +1,19 @@
+[project]
+name = "ecmuap-interface"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "louisreg",email = "l.regnacq@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "ecmuap_interface", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
