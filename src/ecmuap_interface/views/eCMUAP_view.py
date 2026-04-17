@@ -148,7 +148,8 @@ class eCMUAPView:
         epochs = self.epochs(t_pre, t_post, skip_start, skip_end)
         n_epochs = epochs.shape[0]
 
-        with np.errstate(all="ignore"):
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", RuntimeWarning)
             if method == "amplitude":
                 scores = np.nanmax(np.abs(epochs), axis=(1, 2))
             elif method == "rms":
@@ -169,7 +170,9 @@ class eCMUAPView:
                 )
 
         if threshold is None:
-            med = float(np.nanmedian(scores))
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore", RuntimeWarning)
+                med = float(np.nanmedian(scores))
             if not np.isfinite(med):
                 # All scores are NaN — nothing to reject
                 accept_mask = np.ones(n_epochs, dtype=bool)

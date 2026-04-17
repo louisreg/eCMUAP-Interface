@@ -210,7 +210,7 @@ pytest tests/          # 54 tests — unit tests for all core modules
 
 ### Loaders
 
-- [ ] NS5 file loader (`blackrock` / Ripple `.ns5` format)
+- [ ] NS5 file loader (Ripple `.ns5` format)
 - [ ] Generic loader from NumPy arrays / CSV (no proprietary format required)
 
 ### Visualisation
@@ -222,7 +222,7 @@ pytest tests/          # 54 tests — unit tests for all core modules
 ### Analysis
 
 - [ ] Multi-session aggregation helper (stack DataFrames from multiple recordings)
-- [ ] Statistical comparison across conditions (paired t-test / Wilcoxon on exported metrics)
+- [ ] Multi-session analysis and visualisation
 
 ### Code quality
 
