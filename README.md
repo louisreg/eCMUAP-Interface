@@ -200,14 +200,6 @@ pytest tests/          # 54 tests — unit tests for all core modules
 
 ## TODO
 
-### Notebooks
-
-- [ ] Progressive tutorial notebooks
-  - [ ] Single-channel eCMUAP: load → filter → epoch → metrics
-  - [ ] HD-EMG: interpolation → spatial filtering → amplitude maps
-  - [ ] Conduction velocity: delay map, CV map, innervation zone detection
-  - [ ] Full pipeline: load → filter → reject epochs → export CSV
-
 ### Loaders
 
 - [ ] NS5 file loader (Ripple `.ns5` format)
